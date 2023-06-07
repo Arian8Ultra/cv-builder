@@ -1,5 +1,5 @@
-export const primary = "#0A81EC"; /* "#4657F3" */
-export const primaryTransparent = "rgba(8, 129, 235,0.8)";
+export const primary = "rgb(236, 240, 241)"; /* "#4657F3" */
+export const primaryTransparent = "rgb(251, 140, 0, 0.6)";
 export const primaryLight = '#4096FC';/* '#7D8AF7' */
 export const primaryLighter = '#58CDFF';/* '#7D8AF7' */
 export const primaryLightTransparent = 'rgba(125,138,247,0.2)';/* '#f57c00' */

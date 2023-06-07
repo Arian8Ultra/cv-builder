@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Box } from '@mui/system';
-import useAbilityStore from '../stores/abilityStore';
+import useAbilityStore from '../context/abilityStore';
 interface CANProps {
     children: React.ReactNode;
     permissionNeeded: string;

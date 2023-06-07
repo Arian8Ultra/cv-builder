@@ -7,12 +7,20 @@ import {
 
 export const theme = createTheme({
   typography: {
-    fontFamily: "Vazirmatn,sans-serif",
+    fontFamily: "system-ui",
+    fontSize: 14,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    fontWeightBold: 700,
   },
   palette: {
-    mode:"light",
+    mode:"dark",
     primary: {
       main: primary,
+    },
+    text:{
+      primary:'#ffffff',
     },
     secondary: {
       main: secondary,
