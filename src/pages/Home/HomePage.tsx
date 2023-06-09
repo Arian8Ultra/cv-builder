@@ -73,7 +73,8 @@ function HomePage() {
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
-            >
+              className='profile-image'
+              >
               <img
                 src='../src/assets/images/Main3x4.jpg'
                 alt=''
@@ -138,11 +139,11 @@ function HomePage() {
                   Front-end Developer
                 </Typography>
                 <Divider
+                className="divider"
                   sx={{
                     backgroundColor: primary,
                     height: "1px",
-                    animation:
-                      "faded 2s infinite",
+                    position: "relative",
                     width: "70%",
                     zIndex: 3,
                   }}

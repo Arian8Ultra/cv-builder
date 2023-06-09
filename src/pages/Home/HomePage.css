@@ -8,16 +8,13 @@
 }
 
 
-.main-container {}
-
-
 .slider-one {
   background: rgba(77, 77, 77, 0.5);
 }
 
 
 .slider-two {
-  background: linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, 0.5));
+  background: rgb(255, 255, 255);
   position: relative;
 }
 
@@ -36,7 +33,7 @@
 }
 
 .slider-three {
-  background: linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5));
   position: relative;
 }
 
@@ -63,17 +60,26 @@
   width: 100%;
   object-fit: cover;
   border-radius: 100%;
-  filter: grayscale(100%) brightness(100%);
+  /* filter: grayscale(100%) brightness(100%); */
   transition: all 0.5s ease-in-out;
   z-index: 3;
-  /* animation: filterChange 10s infinite; */
-  /* box-shadow: 10px 10px 0 5px #ffffff6c; */
+  position: relative;
 }
 
-.profile-image:hover {
-  filter: grayscale(0%) brightness(100%);
+.profile-image::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: -10px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: conic-gradient(from var(--gradient-degree) at 50% 50%, rgb(0, 255, 255), rgb(255, 153, 0), rgb(0, 255, 255));
+  animation: rotate 5s linear infinite;
+  z-index: 2;
+  filter: blur(10px);
+  transition: all 0.5s ease-in-out;
 }
-
 
 .Logo {
   aspect-ratio: 1/1;
@@ -83,6 +89,8 @@
   filter: grayscale(100%) brightness(100%);
   transition: all 0.2s ease-in-out;
   animation: filterChange 2s both;
+  z-index: 3;
+  position: relative;
 }
 
 .Logo:hover{
@@ -90,6 +98,25 @@
   animation: none;
 }
 
+
+
+/* new property named gradient degree */
+@property --gradient-degree {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* new animation which change gradient degree from 0 to 360 */
+@keyframes rotate {
+  0% {
+    --gradient-degree: 0deg;
+  }
+
+  100% {
+    --gradient-degree: 360deg;
+  }
+}
 
 
 
