@@ -88,9 +88,10 @@
   object-fit: cover;
   filter: grayscale(100%) brightness(100%);
   transition: all 0.2s ease-in-out;
-  animation: filterChange 2s both;
+  animation: filterChange 5s infinite;
   z-index: 3;
   position: relative;
+  user-select: none;
 }
 
 .Logo:hover{

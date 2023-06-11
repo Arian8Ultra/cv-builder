@@ -5,15 +5,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import HomePage from "../pages/Home/HomePage";
 import Root from "./Root";
+import HomePage from "../pages/Home/HomePage";
+import HomeLayout from "../layouts/HomeLayout";
 
-const MainLayout = React.lazy(
-  () => import("../layouts/MainLayout"),
-);
-const HomeLayout = React.lazy(
-  () => import("../layouts/HomeLayout"),
-);
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +18,8 @@ export const router = createBrowserRouter(
       </Route>
 
       <Route path='home' element={<HomeLayout />}>
-        <Route path='' element={<HomePage />} />
+        <Route path='home' element={<HomePage />} />
+        <Route path='home/:id' element={<HomePage />} />
       </Route>
     </Route>,
   ),
